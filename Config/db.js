@@ -3,9 +3,9 @@ const url ='mongodb://127.0.0.1:27017'
 
 const MongoServer= new MongoClient(url)
 
-const connection=()=>{
+const connection=async()=>{
     try {
-        MongoServer.connect()
+        await MongoServer.connect()
         console.log("DataBase Connected");
         
     } catch (error) {
